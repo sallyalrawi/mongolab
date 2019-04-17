@@ -31,13 +31,6 @@ mongoose.connect(MONGODB_URI);
 // Routes
 // ======
 
-// Simple index route
-app.get("/saved", function(req, res) {
-  res.sendFile(path.join(__dirname + "./public/saved.html"));
-});
-
-
-
 // A GET route for scraping the nytimes website
 // app.get("/scrape new article", function(req, res) {
 //   // First, we grab the body of the html with axios
