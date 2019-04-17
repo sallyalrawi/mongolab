@@ -5,26 +5,28 @@ var Schema = mongoose.Schema;
 
 // create a new UserSchema object
 
-var ArticleSchema = new Schema({
+var headlineSchema = new Schema({
 
-  title: {
+  headline: {
+    type: String,
+    required: true,
+    unique:true
+  },
+ 
+  summary: {
     type: String,
     required: true
   },
  
-  link: {
-    type: String,
-    required: true
-  },
- 
-  note: {
-    type: Schema.Types.ObjectId,
-    ref: "Note"
+  date:String,
+  saved: {
+    type: Boolean,
+    default:false
   }
 });
 
 // This creates our model from the above schema, using mongoose's model method
-var Article = mongoose.model("Article", ArticleSchema);
+var headline = mongoose.model("headline", headlineSchema);
 
-// Export the Article model
-module.exports = Article;
+// Export the headline model
+module.exports = headline;
