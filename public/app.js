@@ -1,4 +1,6 @@
-$(".btn btn-danger scrape-new").on("click", function(){
+
+$(".scrape-new").on("click", function(){
+	alert("added 20 new articls");
 	$.ajax({
 		method: "GET",
 		url: "/saved.html",
