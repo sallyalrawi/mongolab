@@ -5,8 +5,7 @@ var path = require("path");
 // Our scraping tools
 var axios = require("axios");
 var cheerio = require("cheerio");
-var Note = require('./models/Note.js');
-var Article = require('./models/Article.js');
+
 // Require all models
 var db = require("./models");
 
